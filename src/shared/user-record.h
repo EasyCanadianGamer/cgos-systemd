@@ -268,7 +268,6 @@ typedef struct UserRecord {
         char *password_hint;
         char *icon_name;
         char *location;
-        struct tm birth_date;
 
         char *blob_directory;
         Hashmap *blob_manifest;

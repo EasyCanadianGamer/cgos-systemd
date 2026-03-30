@@ -41,3 +41,11 @@ display. This is critical for diagnosing build and test failures.
 Per project policy: if you use AI code generation tools, you **must disclose** this in commit messages
 by adding e.g. `Co-developed-by: Claude Opus 4.6 <noreply@anthropic.com>`.
 All AI-generated output requires thorough human review before submission.
+
+## Keeping AGENTS.md Up to Date
+
+- After making any non-trivial change to the repository (new features, removals, workflow scripts,
+  policy changes), update this file (CLAUDE.md / AGENTS.md) to reflect anything an AI agent would
+  need to know about the change.
+- Only add entries that describe behaviour an agent has gotten wrong, or new conventions and tools
+  introduced by the change — do not document things already derivable from reading the code.

@@ -14,6 +14,31 @@ System and Service Manager
 [![Packaging status](https://repology.org/badge/tiny-repos/systemd.svg)](https://repology.org/project/systemd/versions)</br>
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/systemd/systemd/badge)](https://securityscorecards.dev/viewer/?platform=github.com&org=systemd&repo=systemd)
 
+## CGOS Fork
+
+This repository is **cgos-systemd**, a fork of [systemd](https://github.com/systemd/systemd) maintained as part of the [CGOS](https://gitlab.com/canadiangamerOS/) project — a Linux distribution focused on simplicity and user freedom.
+
+### What's different from upstream
+
+- **No age verification / birthDate field** — upstream PR [systemd/systemd#40954](https://github.com/systemd/systemd/pull/40954) introduced a `birthDate` field into JSON user records. This fork permanently removes it. We do not believe an init system should collect or store personal date-of-birth data.
+- Kept in sync with upstream `main` via [`tools/sync-upstream.sh`](tools/sync-upstream.sh).
+
+### Contributing to cgos-systemd
+
+Contributions are welcome! Please follow these steps:
+
+1. **Fork** [cgos-systemd](https://gitlab.com/canadiangamerOS/) on GitLab.
+2. **Branch** off `main` for your change: `git checkout -b my-feature`.
+3. Follow the upstream [Coding Style Guidelines](docs/CODING_STYLE.md) and [Hacking guide](docs/HACKING.md) — they apply here too.
+4. **Do not re-introduce** the `birthDate` field or any age-verification logic. PRs that add it back will be closed.
+5. **Disclose AI assistance** in your commit message if you used AI code generation tools, e.g.:
+   `Co-developed-by: Claude Sonnet 4.6 <noreply@anthropic.com>`
+6. Open a Pull Request against `main` on this repo. Reference any related upstream systemd PR or issue if applicable.
+
+For bugs or questions specific to the CGOS project, open an issue in the main [CGOS repository](https://gitlab.com/canadiangamerOS/).
+
+---
+
 ## Details
 
 Most documentation is available on [systemd's web site](https://systemd.io/).
